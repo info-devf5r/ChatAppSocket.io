@@ -2,7 +2,7 @@
 var socketIO = require('socket.io'),
     http = require('http'),
     port = process.env.PORT || 4000,
-    ip = process.env.IP || '192.168.1.107',
+    ip = process.env.IP || '161.35.29.129',
     server = http.createServer().listen(port, ip, function() {
         console.log("IP = " , ip);
         console.log("start socket successfully");

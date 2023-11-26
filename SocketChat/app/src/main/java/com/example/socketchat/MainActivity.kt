@@ -12,7 +12,7 @@ import com.github.nkzawa.socketio.client.Socket
 
 class MainActivity : AppCompatActivity() {
 
-    // for socket
+    //للمقبس
     private lateinit var app: MyApp
     private var mSocket: Socket? = null
 
@@ -20,11 +20,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // initialize the socket
+        // تهيئة المقبس
         app = application as MyApp
         mSocket = app.getSocket()
 
-        // remove disconnected user
+        // إزالة المستخدم المنقطع الاتصال
         mSocket!!.on("disconnect") {
             runOnUiThread {
                 Log.e("abd", "disconnected")
